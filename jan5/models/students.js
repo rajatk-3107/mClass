@@ -28,6 +28,10 @@ const school = new mongoose.Schema({
         subject: String,
         marks: Number
     }],
+    status: {
+        type: Number,
+        default: 0
+    },
     createdBy: String
 })
 

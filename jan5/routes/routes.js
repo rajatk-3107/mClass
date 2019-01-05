@@ -28,4 +28,15 @@ app.post('/login', login)
 const addStudent = require('./addStudent')
 app.post('/addStudent', verify, addStudent)
 
+const getStudents = require('./getStudents')
+app.get('/getAll', verify, getStudents.getAll)
+app.get('/single', verify, getStudents.getOne)
+
+/**
+ * Update student
+ */
+const updateStudent = require('./editStudents')
+app.post('/update', verify, updateStudent)
+
+
 module.exports = app
